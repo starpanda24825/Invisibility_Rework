@@ -1,25 +1,37 @@
+# Invisibility Rework
 
-Installation information
-=======
+## Overview
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+This is a client-side Minecraft mod that changes what the **Invisibility** effect does visually, without removing or altering the effect itself.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+In vanilla Minecraft, the Invisibility effect hides the entity model and nameplate from other players and mobs. This mod removes that visual suppression, so invisible players and mobs appear fully visible in-game. The effect tag remains on the entity untouched, which means third-party map plugins such as **BlueMap**, **DynMap**, and **Squaremap** — which detect player visibility by reading the Invisibility effect — will still correctly hide the player from the live map.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+## Use Case
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+This mod was designed for a specific server scenario: servers that host live web maps (BlueMap, DynMap, Squaremap, etc.) where players can use the `/effect` command or Invisibility potions to hide themselves from the web map. Without this mod, those players also disappear from other players' screens in-game, which may not be the desired behavior. With this mod, map-hidden players remain visible in-game so that normal PvP/PvE interaction is preserved.
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+## Behavior Summary
+
+- ✅ Entity model renders normally while invisible
+- ✅ Nameplate renders normally while invisible
+- ✅ Player is hidden from BlueMap / DynMap / Squaremap (via the untouched Invisibility effect tag)
+- ❌ Does **NOT** remove or cancel the Invisibility effect
+- ❌ Does **NOT** affect server-side invisibility logic
+
+## Side
+
+This is a **client-side only** mod. It does not need to be installed on the server, and installing it on a dedicated server has no effect (the mixins are registered under the `"client"` side only and will not load on a server).
+
+## Compatibility
+
+- Minecraft **1.21.1**
+- NeoForge **21.1.244+**
+
+## Installation
+
+Standard Forge/NeoForge installation:
+
+1. Install the NeoForge 1.21.1 mod loader for Minecraft 1.21.1.
+2. Launch the game once so the `mods/` folder is generated.
+3. Drop the `invisibilityrework-*.jar` file into your Minecraft `mods/` folder.
+4. Launch the game again.
