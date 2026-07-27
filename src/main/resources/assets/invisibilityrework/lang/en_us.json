@@ -1,13 +1,1 @@
-{
-  "itemGroup.invisibilityrework": "Example Mod Tab",
-  "block.invisibilityrework.example_block": "Example Block",
-  "item.invisibilityrework.example_item": "Example Item",
-
-  "invisibilityrework.configuration.title": "Invisibility Rework Configs",
-  "invisibilityrework.configuration.section.invisibilityrework.common.toml": "Invisibility Rework Configs",
-  "invisibilityrework.configuration.section.invisibilityrework.common.toml.title": "Invisibility Rework Configs",
-  "invisibilityrework.configuration.items": "Item List",
-  "invisibilityrework.configuration.logDirtBlock": "Log Dirt Block",
-  "invisibilityrework.configuration.magicNumberIntroduction": "Magic Number Text",
-  "invisibilityrework.configuration.magicNumber": "Magic Number"
-}
+{}

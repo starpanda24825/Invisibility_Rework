@@ -3,6 +3,9 @@
   "package": "com.starpanda.invisibilityrework.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [],
+  "client": [
+    "MixinLivingEntityRenderer"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
