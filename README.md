@@ -31,7 +31,6 @@ This is a **client-side only** mod. It does not need to be installed on the serv
 
 Standard Forge/NeoForge installation:
 
-1. Install the NeoForge 1.21.1 mod loader for Minecraft 1.21.1.
-2. Launch the game once so the `mods/` folder is generated.
+1. Download the mod file from Curseforge: https://www.curseforge.com/minecraft/mc-mods/invisibility-rework
 3. Drop the `invisibilityrework-*.jar` file into your Minecraft `mods/` folder.
 4. Launch the game again.
